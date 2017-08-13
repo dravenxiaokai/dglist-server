@@ -17,6 +17,16 @@ app.get('/api/products', (request, response, next) => {
     });
 });
 
+// put 通常是改变数据库一条记录的方法
+app.put('/api/products/:id/likes', (request, response) => {
+  Product
+    .findByIdAndUpdate(request.params.id, { $inc: { likes: 1 } })
+    .exec((error) => {
+      if (error) next(error);
+      response.json({ success: true });
+    });
+});
+
 app.use((error, request, response, next) => {
     response.status(500).json({ error: 'Internal Server Error' });
 });
