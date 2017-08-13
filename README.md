@@ -2,7 +2,7 @@
 
 ## 商品列表和点赞功能开发
 
-### ** 技术栈 **
+## 技术栈
 <ol>
     <li>node/express 开发后台api</li>
     <li>mongoose 获取操作mongodb数据</li>
