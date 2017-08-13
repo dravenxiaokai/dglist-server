@@ -2,9 +2,13 @@ const express = require('express');
 const mongoose = require('mongoose');
 const Product = require('./product');
 
+const path = require('path')
+
 mongoose.connect('mongodb://127.0.0.1:27017/dglist');
 
 const app = express();
+
+app.use('/',express.static(path.join(__dirname,'..','client')))
 
 app.get('/', (request, response) => {
     response.send('Hello, Express!');
