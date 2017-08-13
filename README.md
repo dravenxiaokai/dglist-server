@@ -10,4 +10,8 @@
     <li>proxy 解决跨域请求，前后端分离，angular路由与nodejs获取请求两不误</li>
 </ol>
 
+## 生产环境启动服务
+1. Run `node ./src/app.js` 
+2. Navigate to `http://localhost:3000/`.
+
 [我的微博](http://weibo.com/u/3826537889?refer_flag=1001030201_&is_all=1)
